@@ -1,0 +1,50 @@
+body{
+    background: black;
+    margin: 0;
+    height: 200vh;
+    overflow: hidden;
+}
+
+#blob{
+    height: 400px;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    translate : -50% -50%;
+    background:linear-gradient(
+        to right,
+        aquamarine,
+        mediumpurple
+    );
+    animation: rotate 20s infinite;
+}
+
+#blur{
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(200px);
+}
+
+@keyframes rotate{
+    from{
+        rotate: 0deg;
+    }
+    50%{
+        scale: 1 1.5;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+
+h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -100%;
+    color: white;
+    font-family: Poppins;
+    font-size: 6em;
+}
